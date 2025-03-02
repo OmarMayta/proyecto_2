@@ -9,14 +9,26 @@ def clasificar_puntaje(puntaje):
     else:
         return "Necesita Mejorar"
 
-# Interfaz en Streamlit
-st.title("Clasificación de Puntajes")
-st.write("Ingrese un puntaje y el sistema lo clasificará")
+#Menu LAteral
+st.sidebar.title("menu de navegacion")
+opcion = st.sidebar.selectbox("seleccione una opcion",["Inicio", "Clasificación de Puntajes"])
 
-# Entrada de usuario
-puntaje = st.number_input("Ingrese un puntaje (0-100):", min_value=0, max_value=100, step=1)
+#Seccion Inicio
+if opcion == "Inicio":
+    st.title("Bienvenido a la Aplicacación")
 
-# Botón clasificar
-if st.button("Clasificar"):
-    resultado = clasificar_puntaje(puntaje)
-    st.success(f"El puntaje es clasificado como: {resultado}")
+
+
+
+# Seccion clasificacion de puntuacion
+elif opcion == "Clasificacion de puntajes":
+    st.title("Clasificación de Puntajes")
+    st.write("Ingrese un puntaje y el sistema lo clasificará")
+
+    # Entrada de usuario
+    puntaje = st.number_input("Ingrese un puntaje (0-100):", min_value=0, max_value=100, step=1)
+
+    # Botón clasificar
+    if st.button("Clasificar"):
+        resultado = clasificar_puntaje(puntaje)
+        st.success(f"El puntaje es clasificado como: {resultado}")
