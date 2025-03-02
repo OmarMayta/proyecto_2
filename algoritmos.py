@@ -13,6 +13,8 @@ class AlgoritmosSecuenciales:
         return resultado
 
     def fibonacci(self):
+        if self.numero <= 1:
+            return [0] * self.numero  # Asegura que si el número es 0 o 1, devuelvas una secuencia vacía o [0]
         secuencia = [0, 1]
         for _ in range(2, self.numero):
             secuencia.append(secuencia[-1] + secuencia[-2])
