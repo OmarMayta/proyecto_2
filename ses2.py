@@ -11,5 +11,5 @@ numero = st.number_input("Ingrese un numero entero positivo", min_value=1, value
 algoritmos = AlgoritmosSecuenciales(numero)
 
 #Botones para ejecutar los algoritmos secuenciales
-if st.buttom("Calcular Suma de N numeros")
+if st.button("Calcular Suma de N numeros")
     st.success(f"la suma de los primeros {numero} número es: {algoritmos.suma_n_numeros()}")
