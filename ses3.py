@@ -9,19 +9,16 @@ def clasificar_puntaje(puntaje):
     else:
         return "Necesita Mejorar"
 
-#Menu LAteral
-st.sidebar.title("menu de navegacion")
-opcion = st.sidebar.selectbox("seleccione una opcion",["Inicio", "Clasificación de Puntajes"])
+# Menú Lateral
+st.sidebar.title("Menú de Navegación")
+opcion = st.sidebar.selectbox("Seleccione una opción", ["Inicio", "Clasificación de Puntajes"])
 
-#Seccion Inicio
+# Sección Inicio
 if opcion == "Inicio":
-    st.title("Bienvenido a la Aplicacación")
+    st.title("Bienvenido a la Aplicación")
 
-
-
-
-# Seccion clasificacion de puntuacion
-elif opcion == "Clasificacion de puntajes":
+# Sección Clasificación de Puntajes
+elif opcion == "Clasificación de Puntajes":
     st.title("Clasificación de Puntajes")
     st.write("Ingrese un puntaje y el sistema lo clasificará")
 
