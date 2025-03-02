@@ -16,6 +16,15 @@ opcion = st.sidebar.selectbox("Seleccione una opci처n", ["Inicio", "Clasificaci�
 # Secci처n Inicio
 if opcion == "Inicio":
     st.title("Bienvenido a la Aplicaci처n")
+    st.write("Mueva el deslizador para ver c처mo se clasifica el puntaje en tiempo real")
+
+    # Filtro Desplazable
+    puntaje_slider = st.slider("Seleccione un puntaje:", 0, 100, 50)
+
+    # Mostrar el puntaje clasificado en tiempo real
+    resultado_slider = clasificar_puntaje(puntaje_slider)
+    st.write(f"El puntaje seleccionado es: {puntaje_slider}")
+    st.success(f"El puntaje es clasificado como: {resultado_slider}")
 
 # Secci처n Clasificaci처n de Puntajes
 elif opcion == "Clasificaci처n de Puntajes":
